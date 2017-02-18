@@ -14,12 +14,14 @@ sheet2 = wb.sheet_by_index(1)
 #     print(sheet1.cell_value(5 ,col))
 
 for row in range(sheet1.nrows):  # генерим столбцы
-    x = str(sheet1.cell_value(row, 1))
-    y = str(sheet1.cell_value(row, 3))
-    for yy in y:
-        yy.replace('есть', '777')
-        print(type(yy))
-    balance = [x + ',' + y]
+    x = str(sheet1.cell_value(row, 1)).strip()
+    y = str(sheet1.cell_value(row, 3)).strip().replace('есть', '777')
+    balance = x + ',' + y
+    if len(balance)==1:
+        
+    print(len(balance))
+    # if len(balance)<2 in balance:
+    #     balance.remove(',')
     # print(balance)
     # for b in balance:
     #     b.replace('есть', '777')
