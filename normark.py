@@ -1,6 +1,6 @@
 import xlrd, csv
 
-wb = xlrd.open_workbook('SpbFish.xlsx')
+wb = xlrd.open_workbook('SpbFishZakaz.xlsx')
 
 sheet = wb.sheet_by_name('Ост')
 lst_ref = []
